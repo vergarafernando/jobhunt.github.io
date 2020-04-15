@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Questrial&family=Sacramento&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Questrial&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  
+  body{
+    background-image: url(https://lh3.googleusercontent.com/OgkeuWkaqzitj1Hive93wL0gBSao8oaNsSu9h_xbe6-uuq_pVqTMSqbmgDQYGB2m_Jlrn90YC-WciY7i96Fe2GLU08x_ctQxAWESrrwL_ysMul_qYqSUGPXb9W2GWiJQzfdBHviC8A)
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-blend-mode: lighten;
+    background-color: white;
+    background-size: 100% 25%;
+    max-width: 100vw;
+    max-height: auto;
+    margin: 0 auto;
+  }
+  img{
+    opacity: .9;
+    width: 100%;
+    height: 100%;
+  }
+    * {
+  box-sizing: border-box;
+  -webkit-transition: 0.35s ease;
+  transition: 0.35s ease;
+}
+nav{
+  z-index: 1;
+  
+  color: black;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  font-family: 'Questrial', sans-serif;
+font-family: 'Lobster', cursive;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+i{
+  float: right;
+  color: black;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.top-section {
+  height: 640px;
+  color: #e0e5f5;
+  background-color: #272727;
+  overflow: hidden;
+}
+.header-container {
+  height: 400px;
+  width: 400px;
+  border: 4px solid;
+  top: 47%;
+  border-radius: 100%;
+}
+.header-container:before {
+  content: "";
+  display: false;
+  position: absolute;
+  margin: false;
+  top: -12px;
+  left: -12px;
+  right: -12px;
+  bottom: -12px;
+  border: 2px solid #e0e5f5;
+  border-radius: 100%;
+}
+banner {
+width: 100%;
+height: 100%;
+z-index: 1;
+}
+.bg{
+  
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  
+}
+
+article {
+  font-family: 'Questrial', sans-serif;
+  height: 100%;
+  margin-top: 5vh;
+  width: 100%;
+  z-index: 1;
+  background-color: white;
+}
+article h2{
+  
+font-family: 'Lobster', cursive;
+}
+.
+h2 {
+  color: #282F35;
+  font-family: 'Josefin Sans', Arial, sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+p {
+  color: #666666;
+  font-family: 'Malgun Gothic', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 20px;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.acc {
+  margin: 90px 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.acc li {
+  list-style-type: none;
+  padding: 0;
+}
+
+.acc_ctrl {
+  background: #FFFFFF;
+  border: none;
+  border-bottom: solid 1px #F2F2F2;
+  cursor: pointer;
+  display: block;
+  outline: none;
+  padding: 2em;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.acc_ctrl:before {
+  background: #44596B;
+  content: '';
+  height: 2px;
+  margin-right: 37px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  width: 14px;
+}
+
+.acc_ctrl:after {
+  background: #44596B;
+  content: '';
+  height: 2px;
+  margin-right: 37px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 14px;
+}
+
+.acc_ctrl.active:before {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.acc_ctrl.active h2, .acc_ctrl:focus h2 {
+  position: relative;
+}
+
+.acc_panel {
+  background: #F2F2F2;
+  display: none;
+  overflow: hidden;
+}
+
+main {
+  margin-top: 20%;
+  height:100%;
+  z-index: 1;
+  background-color: white;
+  
+  text-align: center;
+}
+.flex-box{
+  margin-top: 20%;
+     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+ 
+   
+    overflow: auto;
+    flex-direction: row;
+}
+.item{
+  width: 33%;
+    height: 55%;
+    margin:5% ;
+  
+}
+.responsive{
+  
+
+}
+.line{
+  margin-top: 0;
+  margin-bottom: 6vh;
+  border: 50px solid #111;
+  background-color: white;
+ 
+}
+aside {
+  margin-top: 10vh;
+  height: 100%;
+  background-color: white;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: scroll;
+}
+.button {
+ background-color: #222; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+.button1 {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+/* Cards */
+.column {
+  height: 200px;
+  margin: 10px;
+  text-align: center;
+  font-size: 2em;
+-webkit-box-shadow: -7px 11px 25px -9px rgba(0,0,0,1);
+-moz-box-shadow: -7px 11px 25px -9px rgba(0,0,0,1);
+box-shadow: -7px 11px 25px -9px rgba(0,0,0,1);
+}
+
+.column p {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+h6{
+  font-family: 'Questrial', sans-serif;
+  color: white;
+}
+
+.brand {
+  min-height: 3rem;
+  background: #212;
+}
+
+.brand-title, .brand-title:hover, .brand-title:focus {
+  color: #fff;
+  font-size: 1.5em;
+  text-align: center;
+  margin-left: 0.6rem;
+  text-transform: uppercase;
+}
+
+.img1 {
+  background: url('https://lh3.googleusercontent.com/qqUGnaMnJOS6Tf6VUfvHwNiTRUoW5jBCaQlV77VZi-EwzCd4IYjj8kQIBHqOO9McVinrwaCefZNao2yv-wuCJXyeXz3K-vLna24upHHMocqVTj3rK59pY1lUkfTSK-Dn-84CUi7zKQ');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img2 {
+  background: url('https://lh3.googleusercontent.com/yLt0wKTFNur6jqXmoPykgbo3F5sJvx7PuE26ujYzLnbIk6H2IWHHrL3FqwazXRvzfNGGwE7dc8rjLG2TI1RpbC8jlHY7lj-2A6Nkr2ZvLN2DgsCi8hpwGmklyeMH1NXTRk-Q-O1_4g');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img3 {
+  background: url('https://lh3.googleusercontent.com/LRmwh9EfUFuMO8_ISzFUvW5DJQez1TY36Iz4NCr2H0RL5H6-V1Yhtoh1_yIutm5T2xcH4mkW2OxmGwAidOqk1rm3HSC57BQbZoCMV-vXZkBZvxJiQK4Hfu0MCJhMB6uSmMBWKb4YQQ');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img4 {
+  background: url('https://lh3.googleusercontent.com/3dt3EyTX57IuCdY1K8pLJ6XGYwi3d9o3VTJc1QEcwm0OF1q-9Rha-bNXZ4fMtCwvmtfmwR9YXNlmdOMjL4OnWcst3lbMq7D09702JISua8vhfVIifkQ5cbv7mkLVsqZNslmAiK2Fmg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img5 {
+  background: url('https://images.unsplash.com/photo-1431492299426-2ea1ce429cc0?crop=entropy&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1375');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer {
+  background-color: #555;
+  height: 240px;
+  position: relative;
+  z-index: -2;
+}
+
+.footer-inner {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+ 
+  z-index: -1;
+  border: 1px solid transparent;
+  color: #fff;
+  padding: 1px;
+  padding-bottom: 60px;
+}
+
+  </style>
+</head>
+<body>
+  <nav>
+<!-- PAGE STUFF -->
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+
+<span style="font-family: 'Sacramento', cursive";"font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Quality Air</span>
+
+<a href="">
+  
+<i class="fa fa-shopping-cart" style="font-size:28px"></i>
+</a>
+</nav>
+
+  
+  
+<banner>
+  <div class="bg">
+  
+ <img src = "https://lh3.googleusercontent.com/OZ7iCyWsgeuRwNA2Qs_rRxiatJLPq15lF-kCiFWdCAO7ut5Ozv_h4bXD5_Pv4cCNib6_e14CO0HslgDch87-gOEJIL_iShfergfVOTjD21tprijRriCewwK7Ci_gByrowxlsR5RUnA"/>
+ </div>
+</banner>
+<hr class="line">
+<article>
+  <div class="container">
+  <ul class="acc">
+    <li>
+      <button class="acc_ctrl"><h2>Top Reasons To Get An Air Purifier</h2></button>
+      <div class="acc_panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro quaerat nesciunt natus cupiditate deleniti perspiciatis omnis cumque blanditiis voluptates provident?</p>
+      </div>
+    </li>
+    <li>
+      <button class="acc_ctrl"><h2>COVID:19</h2></button>
+      <div class="acc_panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta dolore ducimus, ratione labore laudantium vitae non sapiente rerum odio aspernatur possimus voluptatem rem voluptatum iusto aliquam vero obcaecati illum accusamus quod. Culpa officia rerum quis soluta tenetur, quia vero maxime!</p>
+      </div>
+    </li>
+    <li>
+      <button class="acc_ctrl"><h2>Made In USA</h2></button>
+      <div class="acc_panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit aliquam aut, culpa rem quo praesentium error dolore, labore pariatur deleniti, incidunt consectetur.</p>
+      </div>
+    </li>
+  </ul>
+  <button class="button button1">Shop Now</button>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+</article>
+
+<main>
+<hr class="line">
+  <h2>What's your sure quality concern</h2>
+ <div class="flex-box">
+   <div class="item"><img class="responsive" src = "https://lh3.googleusercontent.com/WV-PmzJd8Lzd73qZUHw7qxRHvs5lmXUpKyuH4gVun4CiVJ6Vf3Nc02RDxhI2N_Q8vq5SJUAG-N7WAYuU5OtHOYeS3f7n2ptd3-sgd-a0aAIB81GnuoYFfE6MvcVzUlVeB7Bg2yFccQ" width="600" height="315" />allergies</div>
+   <div class="item"><img class="responsive" src = "https://lh3.googleusercontent.com/eGuhVl16WGiRwxGQpeM7dsbQGbuDdIM0yXT0Oi8qEtYgACgpzSvSFAs9hMKvj6yyhwI9tq9WNW4T2PIvck4o9tt6iKrYvnKkHzZrEykVVixX1D0U3HhNJO1hX7wcmHG2nutO6MCIhQ" width="600" height="315" />ashtma</div>
+    <div class="item"><img class="responsive" src = "https://lh3.googleusercontent.com/YHdYSww7etQjJOnb3-HQBmDKSLpsPvW2VQMKqlckkNkCUKVgN8NV1LqI3UwSIHbjOunhB9E0pxnqeBUvHwsPq3J1e9F2yYXkZI7E8amXFSSXP1jVBrhFaZQtHKabWQcLKtBiC7L5tw" width="600" height="315"/>chemicals</div>
+   <div class="item"><img class="responsive" src = "https://lh3.googleusercontent.com/P4itMuSLtWAQ82-kd4T4Of-AOHtXBBtrYtZjBVmOBT-RsJhw96b59ctFnextdVhWTqasiZg-q61iXzfG2rhXYknhZkLIjTPddD4Mvn8Net1Jyxhj0zjfYF-Wjcdh-9TrPcm_l26LqQ" width="600" height="315" />dust</div>
+   
+   <div class="item"><img class="responsive"src = "https://lh3.googleusercontent.com/nCd2wcQNq-tY7ikpaYJjXPfosfWMyaQHsjZ0IlKWuKNo2qzsQHKhPFhst0HbKoWsFjQ2WtMj6g-7E5YP49oZzq5ClIymihZ81O-ghy1sYVP_xTOyr_Nvz5G0TlANX9_RvBmZen4qcw" width="600" height="315" />germs</div>
+  
+   <div class="item"><img class="responsive" src = "https://lh3.googleusercontent.com/fKPtTkVZIjXwXMPUwM_imqBKHBeZO7aip65wtVaKDxr6sukc6kUv5znont87W__uHgdW5pKfBiyU55dxm9pKcQdjnHeSAp4X_FUH1TVNTPTG40_axX-5zR9pgC5x-UkR3ErNQHYfyQ" width="600" height="315" />mold</div>
+    <div class="item"><img class="responsive" src = "https://lh3.googleusercontent.com/KmzEgrkjhdTJVRT5nLvEfz5p5nUp_uC15H0MLtqDxp-XU9gsg3m2tj7PQCf6Nl9oZO0-Bu9yMzugWoIT984Fa3MUhEr0pdwgGuiJfUUXD8k9SAR0khncyleHLEUHEgoe3hCVsKdalQ" width="600" height="315" />pets</div>
+   <div class="item"><img class="responsive" src = "https://lh3.googleusercontent.com/w-XyN65-XZd-Gz9QuUlWTeHxtv0FwgzQiYW1WI2045ioEo8G7M9PQK8K8CbF1Vm0MtqlnAJmP3OShey4AjeDEvS296z558oQDwxsRKYOx7XsSrFqYt4-zMtif0MYv8WPyEsnFzrljA" width="600" height="315" />smoke</div>
+ </div>
+  <button class="button button1">Shop Now</button>
+</main>
+<aside>
+  <hr class="line">
+<section class="section cards">
+<div class="container">
+  <div class="columns is-multiline">
+    <div class="column img1 toaster is-quarter">
+      <h6>Technology
+By going to greater lengths, we engineered a better filter.</h6>
+    </div>
+    <div class="column img2 xpro2 is-quarter">
+      <h6>Removes 99.95% of allergens and pollutants as small as 0.1 microns from the air.</h6>
+    </div>
+    <div class="column img3 willow is-quarter">
+      <h6>Purifying fan when you need it</h6>
+    </div>
+    
+    
+    <div class="column img5 reyes is-quarter">
+      <p>Dyson Air Purifier</p>
+    </div>
+  </div>
+</div>
+</section>
+</aside>
+<footer>
+  <div class="footer">
+  <div class="footer-inner">
+    <h3>Footer</h3>
+<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
+  </div>
+</div>
+<div class="container blue circleBehind">
+  <a>HOME</a>
+  <a>ARTICLES</a>
+  <a>PORTFOLIO</a>
+  <a>ABOUT</a>
+  <a>CONTACT</a>
+</div>
+</footer>
+<div class="rela-block spacer"></div>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+</script>
+<script>
+  $(function() {
+  $('.acc_ctrl').on('click', function(e) {
+    e.preventDefault();
+    if ($(this).hasClass('active')) {
+      $(this).removeClass('active');
+      $(this).next()
+      .stop()
+      .slideUp(300);
+    } else {
+      $(this).addClass('active');
+      $(this).next()
+      .stop()
+      .slideDown(300);
+    }
+  });
+});
+</script>
+<script>
+  
+  'use strict';
+
+(function(){
+  //Cache elements for use
+  var hamburger = document.getElementById('menu');
+  var s = document.getElementById('search');
+  var likes = document.getElementById('likesCounter');
+  var submit = document.getElementById('submit');
+  var likes = document.getElementById('parent');
+  
+  //Event Handlers
+  var search = s.addEventListener('click', searchHandler);
+  var submitVal = submit.addEventListener('click', onSubmit);
+  var likesEvent = likes.addEventListener('click',likesHandler);
+  
+  //Handler Logic
+  
+  function searchHandler(e) {
+    var sr = document.getElementById('search-bar');
+    
+    if(sr.style.display === 'none' && submit.style.display === 'none') {
+      sr.style.display = 'block';
+      submit.style.display = 'block';
+    }
+    
+    else {
+      sr.style.display = 'none';
+      submit.style.display = 'none';
+    } 
+  }
+  
+  function onSubmit() {
+    var inputVal = document.getElementById('search-bar').value;
+    var arrList = [];  
+    document.getElementById('search-bar').value = "";
+  } 
+  
+  function likesHandler(e) {
+    e.preventDefault();
+    if(e.target.nodeName === "SPAN") {
+      var currentNum = e.target.innerText;
+      var currentId = e.target.id;
+      likesIncrement(currentNum, currentId);
+    }
+  }
+  
+  function likesIncrement(currentNum, currentId) {
+    currentNum = currentNum.replace(/,/g, "");
+    currentNum = parseInt(currentNum);
+    currentNum++;
+    currentNum = String(currentNum);
+    currentNum = numberWithCommas(currentNum);
+    document.getElementById(currentId).innerText = currentNum;
+  }
+    
+  function numberWithCommas(likes) {
+    return likes.replace(/(.)(?=(.{3})+$)/g,"$1,");
+  }
+
+ }());
+</script>
+</body>
+</html>
